@@ -1,4 +1,4 @@
-from board import Board
+from .board import Board
 
 class Game(object):
     def __init__(self):
@@ -18,6 +18,7 @@ class Game(object):
         self.board.snake.move()
         if not self.board.check_state():
             print("The snake died and you lost!")
+            print("You gained", self.board.points, "point(s)!")
             return False
 
         return True

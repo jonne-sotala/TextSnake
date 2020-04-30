@@ -1,4 +1,4 @@
-from snakebody import SnakeBody
+from .snakebody import SnakeBody
 
 class Snake(object):
 

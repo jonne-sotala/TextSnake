@@ -1,5 +1,5 @@
-from snake import Snake
-from food import Food
+from .snake import Snake
+from .food import Food
 import random
 
 class Board(object):
@@ -10,6 +10,7 @@ class Board(object):
         self.SNAKE = "o"
         self.BORDER = "X"
         self.FOOD = "A"
+        self.points = 0
         self.food = Food(-1, -1)
         self.grid = [self.EMPTY] * (n+2)
         # Fill in the borders
@@ -62,6 +63,7 @@ class Board(object):
         elif self.grid[self.snake.locationX][self.snake.locationY] == self.FOOD:
             self.move_snake()
             self.snake.eat()
+            self.points += 1
             self.new_food()
             return True
         

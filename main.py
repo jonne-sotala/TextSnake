@@ -1,4 +1,4 @@
-from game import Game
+from game_files.game import Game
 
 game = Game()
 while True:
